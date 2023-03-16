@@ -70,6 +70,7 @@
             this.workerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
             this.workerToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.workerToolStripMenuItem.Text = "&Worker";
+            this.workerToolStripMenuItem.Click += new System.EventHandler(this.workerToolStripMenuItem_Click);
             // 
             // customerToolStripMenuItem
             // 
@@ -77,6 +78,7 @@
             this.customerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.customerToolStripMenuItem.Size = new System.Drawing.Size(94, 24);
             this.customerToolStripMenuItem.Text = "&Customer";
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // jobDetailsToolStripMenuItem
             // 
@@ -84,6 +86,7 @@
             this.jobDetailsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.J)));
             this.jobDetailsToolStripMenuItem.Size = new System.Drawing.Size(106, 24);
             this.jobDetailsToolStripMenuItem.Text = "&Job Details ";
+            this.jobDetailsToolStripMenuItem.Click += new System.EventHandler(this.jobDetailsToolStripMenuItem_Click);
             // 
             // reportsToolStripMenuItem
             // 
@@ -91,6 +94,7 @@
             this.reportsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
             this.reportsToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             this.reportsToolStripMenuItem.Text = "&Reports";
+            this.reportsToolStripMenuItem.Click += new System.EventHandler(this.reportsToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -98,6 +102,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
             this.exitToolStripMenuItem.Text = "&Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // Form1
             // 

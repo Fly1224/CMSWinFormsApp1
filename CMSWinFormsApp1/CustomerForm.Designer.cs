@@ -1,4 +1,6 @@
-﻿namespace CMSWinFormsApp1
+﻿using System;
+
+namespace CMSWinFormsApp1
 {
     partial class CustomerForm
     {
@@ -28,6 +30,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCarNo = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -43,6 +46,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.errorCustForm = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorCustForm)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCarNo
@@ -87,6 +92,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(149, 25);
             this.textBox1.TabIndex = 4;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -124,6 +130,7 @@
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnCancel
             // 
@@ -151,6 +158,7 @@
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnPrevious
             // 
@@ -169,6 +177,10 @@
             this.btnNext.TabIndex = 14;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // errorCustForm
+            // 
+            this.errorCustForm.ContainerControl = this;
             // 
             // CustomerForm
             // 
@@ -192,6 +204,7 @@
             this.Controls.Add(this.lblCarNo);
             this.Name = "CustomerForm";
             this.Text = "CustomerForm";
+            ((System.ComponentModel.ISupportInitialize)(this.errorCustForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,5 +227,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.ErrorProvider errorCustForm;
+
+        public EventHandler CustomerForm_Load { get; private set; }
     }
 }

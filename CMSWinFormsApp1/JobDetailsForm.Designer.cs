@@ -50,7 +50,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.textCarNo = new System.Windows.Forms.TextBox();
-            this.textJobDate = new System.Windows.Forms.TextBox();
             this.textWorkerID = new System.Windows.Forms.TextBox();
             this.textKMs = new System.Windows.Forms.TextBox();
             this.textTuning = new System.Windows.Forms.TextBox();
@@ -82,6 +81,7 @@
             this.btnCancelAll = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -89,9 +89,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(78, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 15);
+            this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Car No.";
+            this.label1.Text = "CarNo";
             // 
             // label2
             // 
@@ -281,13 +281,8 @@
             this.textCarNo.Name = "textCarNo";
             this.textCarNo.Size = new System.Drawing.Size(173, 25);
             this.textCarNo.TabIndex = 24;
-            // 
-            // textJobDate
-            // 
-            this.textJobDate.Location = new System.Drawing.Point(168, 76);
-            this.textJobDate.Name = "textJobDate";
-            this.textJobDate.Size = new System.Drawing.Size(173, 25);
-            this.textJobDate.TabIndex = 25;
+            this.textCarNo.TextChanged += new System.EventHandler(this.textCarNo_TextChanged);
+            this.textCarNo.Leave += new System.EventHandler(this.textCarNo_Leave);
             // 
             // textWorkerID
             // 
@@ -518,6 +513,7 @@
             this.btnExit.TabIndex = 55;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnUpdate
             // 
@@ -527,12 +523,21 @@
             this.btnUpdate.TabIndex = 56;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(168, 78);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(173, 25);
+            this.dateTimePicker1.TabIndex = 57;
             // 
             // JobDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 762);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnCancelAll);
@@ -564,7 +569,6 @@
             this.Controls.Add(this.textTuning);
             this.Controls.Add(this.textKMs);
             this.Controls.Add(this.textWorkerID);
-            this.Controls.Add(this.textJobDate);
             this.Controls.Add(this.textCarNo);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label23);
@@ -589,6 +593,7 @@
             this.Controls.Add(this.label1);
             this.Name = "JobDetailsForm";
             this.Text = "JobDetailsForm";
+            this.Leave += new System.EventHandler(this.JobDetailsForm_Leave);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,7 +623,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textCarNo;
-        private System.Windows.Forms.TextBox textJobDate;
         private System.Windows.Forms.TextBox textWorkerID;
         private System.Windows.Forms.TextBox textKMs;
         private System.Windows.Forms.TextBox textTuning;
@@ -650,5 +654,6 @@
         private System.Windows.Forms.Button btnCancelAll;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
